@@ -1,4 +1,4 @@
-# Hi there! 👋 I'm a Data & ML Engineer
+# Hi there! I am Mouad Jaouhari. You can call me MJ
 
 <div align="center">
   
@@ -59,10 +59,10 @@ graph LR
 
 ## 🚀 Current Focus
 
-- 🔭 Working on **large-scale data migration projects**
-- 🌱 Learning **advanced MLOps practices**
-- 👯 Looking to collaborate on **open-source data tools**
-- 💬 Ask me about **data architecture & cloud solutions**
+- Working on **large-scale data migration projects**
+- Learning **advanced data tools**
+- Learning **advanced MLOps practices**
+- Taking courses and certifications about **data architecture & cloud solutions**
 
 ## 📈 Activity Graph
 
