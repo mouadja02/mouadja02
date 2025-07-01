@@ -93,22 +93,42 @@
   <path d="M 520 150 L 560 150" class="flow-arrow"/>
   <path d="M 650 150 L 690 150" class="flow-arrow"/>
   
-    <!-- Animated Data Flow Particles -->Add commentMore actions
+    <!-- Animated Data Flow Particles -->
   <circle cx="150" cy="150" r="3" class="data-flow">
     <animateTransform attributeName="transform" type="translate" 
-                      values="0,0; 130,0; 260,0; 390,0; 520,0; 650,0" 
-                      dur="6s" repeatCount="indefinite"/>
+                      from="130"
+                      to="180" 
+                      dur="3s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="150" cy="150" r="2" class="data-flow">
+
+  <circle cx="150" cy="150" r="3" fill="#3b82f6">
     <animateTransform attributeName="transform" type="translate" 
-                      values="0,0; 130,0; 260,0; 390,0; 520,0; 650,0" 
-                      dur="6s" begin="1s" repeatCount="indefinite"/>
+                      from="110"
+                      to="160" 
+                      start="3s" dur="4s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="150" cy="150" r="2" class="data-flow">
+
+  <circle cx="150" cy="150" r="3" fill="#3b82f6">
     <animateTransform attributeName="transform" type="translate" 
-                      values="0,0; 130,0; 260,0; 390,0; 520,0; 650,0" 
-                      dur="6s" begin="2s" repeatCount="indefinite"/>
+                      from="240"
+                      to="290" 
+                      start="6s" dur="5s" repeatCount="indefinite"/>
   </circle>
+
+<circle cx="150" cy="150" r="3" fill="#3b82f6">
+    <animateTransform attributeName="transform" type="translate" 
+                      from="370"
+                      to="410" 
+                      start="9s" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="150" cy="150" r="3" fill="#3b82f6">
+    <animateTransform attributeName="transform" type="translate" 
+                      from="500"
+                      to="540" 
+                      start="12s" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
   
   <!-- Cloud Infrastructure Layer -->
   <text x="400" y="50" class="stage-text" style="font-size: 14px; fill: #64748b;">
