@@ -57,13 +57,15 @@
   <rect x="180" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
   <text x="220" y="130" class="stage-text">INGESTION</text>
   <text x="220" y="150" class="stage-text">Airflow</text>
-  <text x="220" y="165" class="stage-text">Spark</text>
+  <text x="220" y="165" class="stage-text">Kafka</text>
+  <text x="220" y="180" class="stage-text">Spark Stream</text>
   
   <!-- Processing -->
   <rect x="310" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
   <text x="350" y="130" class="stage-text">PROCESSING</text>
-  <text x="350" y="150" class="stage-text">Python</text>
-  <text x="350" y="165" class="stage-text">ML Models</text>
+  <text x="350" y="150" class="stage-text">Apache Spark</text>
+  <text x="350" y="165" class="stage-text">Python</text>
+  <text x="350" y="180" class="stage-text">Databricks</text>
   
   <!-- Storage -->
   <rect x="440" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
@@ -71,11 +73,12 @@
   <text x="480" y="150" class="stage-text">Snowflake</text>
   <text x="480" y="165" class="stage-text">PostgreSQL</text>
   
-  <!-- Analytics -->
+  <!-- ML & Analytics -->
   <rect x="570" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
-  <text x="610" y="130" class="stage-text">ANALYTICS</text>
-  <text x="610" y="150" class="stage-text">BI Tools</text>
-  <text x="610" y="165" class="stage-text">Dashboards</text>
+  <text x="610" y="130" class="stage-text">ML & ANALYTICS</text>
+  <text x="610" y="150" class="stage-text">TensorFlow</text>
+  <text x="610" y="165" class="stage-text">PyTorch</text>
+  <text x="610" y="180" class="stage-text">BI Tools</text>
   
   <!-- Deployment -->
   <rect x="700" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
@@ -116,4 +119,4 @@
   <text x="400" y="280" class="stage-text" style="font-size: 16px; fill: #3b82f6;">
     Data Engineering Pipeline
   </text>
-</svg> 
+</svg>
