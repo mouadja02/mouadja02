@@ -53,37 +53,38 @@
   <line x1="600" y1="100" x2="650" y2="250" class="constellation-line"/>
   
   <!-- Central Node - Data Engineering -->
-  <circle cx="400" cy="200" r="25" class="tech-node primary-node"/>
-  <text x="400" y="200" class="tech-text">DATA</text>
-  <text x="400" y="215" class="tech-text">ENGINEERING</text>
+  <circle cx="400" cy="200" r="40" class="tech-node primary-node"/>
+  <text x="400" y="190" class="tech-text">DATA</text>
+  <text x="400" y="205" class="tech-text">ENGINEERING</text>
   
   <!-- Tech Stack Nodes -->
   <circle cx="200" cy="100" r="18" class="tech-node"/>
   <text x="200" y="100" class="tech-text">GCP</text>
   
-  <circle cx="600" cy="100" r="18" class="tech-node"/>
+  <circle cx="600" cy="100" r="28" class="tech-node"/>
   <text x="600" y="100" class="tech-text">AWS</text>
   
-  <circle cx="150" cy="250" r="18" class="tech-node"/>
+  <circle cx="150" cy="250" r="35" class="tech-node"/>
   <text x="150" y="250" class="tech-text">Python</text>
   
-  <circle cx="650" cy="250" r="18" class="tech-node"/>
+  <circle cx="650" cy="250" r="20" class="tech-node"/>
   <text x="650" y="250" class="tech-text">Spark</text>
   
-  <circle cx="300" cy="320" r="18" class="tech-node"/>
+  <circle cx="300" cy="320" r="27" class="tech-node"/>
   <text x="300" y="320" class="tech-text">ML/AI</text>
   
-  <circle cx="500" cy="320" r="18" class="tech-node"/>
+  <circle cx="500" cy="320" r="23" class="tech-node"/>
   <text x="500" y="320" class="tech-text">Docker</text>
   
   <!-- Additional smaller nodes -->
-  <circle cx="100" cy="150" r="12" class="tech-node"/>
+  <circle cx="100" cy="150" r="25" class="tech-node"/>
   <text x="100" y="150" class="tech-text">SQL</text>
   
-  <circle cx="700" cy="150" r="12" class="tech-node"/>
-  <text x="700" y="150" class="tech-text">Airflow</text>
+  <circle cx="700" cy="150" r="30" class="tech-node"/>
+  <text x="700" y="140" class="tech-text">Apache</text>
+  <text x="700" y="165" class="tech-text">Stack</text>
   
   <!-- Connecting lines for smaller nodes -->
   <line x1="200" y1="100" x2="100" y2="150" class="constellation-line"/>
-  <line x1="600" y1="100" x2="700" y2="150" class="constellation-line"/>
+  <line x1="630" y1="100" x2="670" y2="130" class="constellation-line"/>
 </svg> 
