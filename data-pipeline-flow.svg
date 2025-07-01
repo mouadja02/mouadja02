@@ -107,7 +107,7 @@
   <circle cx="150" cy="150" r="2" class="data-flow">
     <animateTransform attributeName="transform" type="translate" 
                       values="0,0; 130,0; 260,0; 390,0; 520,0; 650,0" 
-                      dur="6s" begin="2s" repeatCount="indefinite"/>
+                      dur="5s" begin="1s" repeatCount="indefinite"/>
   </circle>
   
   <!-- Cloud Infrastructure Layer -->
