@@ -35,14 +35,6 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 
-## 📊 GitHub Analytics
-
-<div align="center">
-  
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&langs_count=7&theme=tokyonight"/>
-  
-</div>
 
 ## 🏗️ What I Build
 
@@ -54,12 +46,12 @@ graph LR
     D --> E[Predictions]
     E --> F[Business Value]
     
-    style A fill:#ff6b6b
-    style B fill:#4ecdc4
-    style C fill:#45b7d1
-    style D fill:#96ceb4
-    style E fill:#feca57
-    style F fill:#ff9ff3
+    style A fill:#ff6b6b,color:#000000
+    style B fill:#4ecdc4,color:#000000
+    style C fill:#45b7d1,color:#000000
+    style D fill:#96ceb4,color:#000000
+    style E fill:#feca57,color:#000000
+    style F fill:#ff9ff3,color:#000000
 ```
 
 ## 🚀 Current Focus
