@@ -1,51 +1,46 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+<svg width="600" height="420" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
   <defs>
     <style>
       .skill-label {
-        font-family: 'Monaco', 'Menlo', monospace;
-        font-size: 14px;
-        fill: #e2e8f0;
+        font-family: 'JetBrains Mono', 'Monaco', 'Menlo', monospace;
+        font-size: 13px;
+        fill: #fafaf9;
         font-weight: 500;
       }
       .skill-bar-bg {
-        fill: #1e293b;
-        stroke: #334155;
+        fill: #1c1917;
+        stroke: #292524;
         stroke-width: 1;
         rx: 10;
       }
       .skill-bar-fill {
         fill: url(#gradient);
         rx: 10;
-        animation: fillAnimation 2s ease-out;
       }
       .percentage {
-        font-family: 'Monaco', 'Menlo', monospace;
+        font-family: 'JetBrains Mono', 'Monaco', 'Menlo', monospace;
         font-size: 12px;
-        fill: #64748b;
-      }
-      @keyframes fillAnimation {
-        from { width: 0; }
-        to { width: var(--target-width); }
+        fill: #78716c;
       }
     </style>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
     </linearGradient>
   </defs>
   
   <!-- Background -->
-  <rect width="600" height="400" fill="#0f172a"/>
+  <rect width="600" height="420" fill="#0c0a09"/>
   
   <!-- Title -->
-  <text x="300" y="40" class="skill-label" style="font-size: 18px; text-anchor: middle; fill: #3b82f6;">
+  <text x="300" y="40" class="skill-label" style="font-size: 18px; text-anchor: middle; fill: #00f0ff; font-weight: 700;">
     Technical Proficiency
   </text>
   
   <!-- Python -->
   <text x="50" y="85" class="skill-label">Python</text>
   <rect x="150" y="70" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="70" width="270" height="20" class="skill-bar-fill" style="--target-width: 270px;">
+  <rect x="150" y="70" width="270" height="20" class="skill-bar-fill">
     <animate attributeName="width" values="0;270" dur="2s" begin="0.5s" fill="freeze"/>
   </rect>
   <text x="460" y="85" class="percentage">90%</text>
@@ -105,4 +100,12 @@
     <animate attributeName="width" values="0;195" dur="2s" begin="1.9s" fill="freeze"/>
   </rect>
   <text x="460" y="365" class="percentage">65%</text>
-</svg> 
+
+  <!-- AI Automation -->
+  <text x="50" y="405" class="skill-label">AI Automation</text>
+  <rect x="150" y="390" width="300" height="20" class="skill-bar-bg"/>
+  <rect x="150" y="390" width="225" height="20" class="skill-bar-fill">
+    <animate attributeName="width" values="0;225" dur="2s" begin="2.1s" fill="freeze"/>
+  </rect>
+  <text x="460" y="405" class="percentage">75%</text>
+</svg>
