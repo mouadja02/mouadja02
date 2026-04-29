@@ -20,27 +20,6 @@ Engineering intelligent data pipelines, ML models & cloud-native architectures.
 
 </div>
 
-## About
-
-I am a passionate and results-oriented engineer with a diverse background spanning **signal processing, machine learning, and cloud-native data engineering**. My journey has been driven by a relentless curiosity and a desire to build intelligent systems that solve real-world problems.
-
-> *"Continuous learning is not just my strategy — it is my competitive advantage."*
-
-| | |
-|---|---|
-| **M.Eng** | Signal & Image Processing, ENSEIRB-MATMECA |
-| **10+** | Projects Completed |
-| **25+** | Technologies Mastered |
-
-## Expertise
-
-| Area | Focus |
-|------|-------|
-| **Cloud Architecture** | AWS & GCP certified. Designing scalable, cost-efficient cloud infrastructure. |
-| **Data Engineering** | Building end-to-end pipelines with Spark, Kafka, Snowflake, and Airflow. |
-| **Machine Learning** | From research to production: TensorFlow, NLP, computer vision, and MLOps. |
-| **AI Automation** | n8n workflows, LLM integrations, and intelligent agents for business automation. |
-
 ---
 
 <div align="center">
@@ -75,23 +54,6 @@ I am a passionate and results-oriented engineer with a diverse background spanni
 ![n8n](https://img.shields.io/badge/n8n-FF6D5A?style=for-the-badge&logo=n8n&logoColor=white)
 
 </div>
-
----
-
-## Featured Projects
-
-| Project | Category | Description | Tech Stack |
-|---------|----------|-------------|------------|
-| [**Bitcoin Technical Indicators Dataset**](https://github.com/mouadja02/bitcoin-technical-indicators-dataset) | Open Source / Data | Bitcoin Hourly OHLCV with 70+ Technical Indicators. Daily updated dataset for ML & Trading Analysis. | Python, Pandas, TA-Lib, CCXT |
-| [**Murmur**](https://github.com/mouadja02/murmur) | AI / Desktop App | Desktop overlay that listens to your voice, transcribes locally, runs through a local LLM, and pastes refined output anywhere. | TypeScript, Electron, Whisper, Ollama |
-| [**Neural Network CUDA**](https://github.com/mouadja02/neural-network-cuda) | Machine Learning | High-performance neural network implementations using NVIDIA CUDA for GPU-accelerated deep learning. | CUDA, C++, Python, PyTorch |
-| [**Skills Showcase**](https://github.com/mouadja02/skills) | DevOps | Collection of automation scripts, GitHub Actions workflows, and infrastructure templates. | GitHub Actions, Bash, Docker, Terraform |
-| [**AWS Certifications Coach**](https://github.com/mouadja02/aws-certifications-coach) | AI / Education | AI-powered learning platform to help students prepare for AWS certification exams. | n8n, Snowflake, Streamlit, Python |
-| [**Bitcoin News & Sentiment Dataset**](https://github.com/mouadja02/bitcoin-news-data) | Open Source / Data | Comprehensive dataset of Bitcoin news articles and Fear & Greed Index collected hourly. | Python, Web Scraping, NLP |
-| [**Modern Data Engineering Platform**](https://github.com/mouadja02/end2end-datawarehouse-project) | Data Engineering | End-to-end data engineering project with medallion architecture and Apache Iceberg. | Spark, Kafka, AWS Glue, Snowflake |
-| [**Bitcoin Trading Platform**](https://github.com/mouadja02/bitcoin-trading-platform) | Machine Learning | Market analysis platform combining blockchain data with reinforcement learning for trading optimization. | Snowflake, Python, TensorFlow, Airflow |
-| [**AI Fitness Coaching Agent**](https://github.com/mouadja02/hevy-coaching-agent) | AI / Automation | AI agent that transforms Hevy App workout data into personalized coaching advice via Telegram. | n8n, Python, Telegram API |
-| [**Satellite IoT Routing**](https://ieeexplore.ieee.org/document/10667193/) | Research | Optimizing satellite communication routing algorithms for IoT devices — published IEEE paper. | MATLAB, C++, Algorithm Design |
 
 ---
 
