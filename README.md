@@ -8,7 +8,7 @@ Engineering intelligent data pipelines, ML models & cloud-native architectures.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-0c0a09?style=for-the-badge&logo=About.me&logoColor=00f0ff)](https://mouadja02.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/j-mouad)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mouad.jaouhari@bordeaux-inp.fr)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mouadpro02@gmail.com)
 
 </div>
 
@@ -73,7 +73,7 @@ Engineering intelligent data pipelines, ML models & cloud-native architectures.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-0c0a09?style=for-the-badge&logo=About.me&logoColor=00f0ff)](https://mouadja02.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/j-mouad)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mouad.jaouhari@bordeaux-inp.fr)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mouadpro02@gmail.com)
 
 ![Profile Views](https://komarev.com/ghpvc/?username=mouadja02&color=00f0ff&style=flat-square)
 
