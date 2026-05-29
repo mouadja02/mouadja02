@@ -147,26 +147,56 @@ flowchart LR
 
 ## Featured Builds — where Data meets Agents
 
-<a href="https://github.com/mouadja02/dacli">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mouadja02&repo=dacli&bg_color=0a0a0f&title_color=00f0ff&icon_color=a855f7&text_color=a8a29e&hide_border=true" />
-</a>
-<a href="https://github.com/mouadja02/dag-doctor">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mouadja02&repo=dag-doctor&bg_color=0a0a0f&title_color=00f0ff&icon_color=a855f7&text_color=a8a29e&hide_border=true" />
-</a>
+<table align="center">
+<tr>
+<td width="50%" valign="top" align="left">
 
-<a href="https://github.com/mouadja02/CAG-Lab">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mouadja02&repo=CAG-Lab&bg_color=0a0a0f&title_color=00f0ff&icon_color=a855f7&text_color=a8a29e&hide_border=true" />
-</a>
-<a href="https://github.com/mouadja02/skills">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mouadja02&repo=skills&bg_color=0a0a0f&title_color=00f0ff&icon_color=a855f7&text_color=a8a29e&hide_border=true" />
-</a>
+#### [dacli](https://github.com/mouadja02/dacli)
+An intelligent CLI agent that builds production-grade data warehouses from scratch on your chosen data platform.
 
-<a href="https://github.com/mouadja02/bitcoin-technical-indicators-dataset">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mouadja02&repo=bitcoin-technical-indicators-dataset&bg_color=0a0a0f&title_color=00f0ff&icon_color=a855f7&text_color=a8a29e&hide_border=true" />
-</a>
-<a href="https://github.com/mouadja02/end2end-datawarehouse-project">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mouadja02&repo=end2end-datawarehouse-project&bg_color=0a0a0f&title_color=00f0ff&icon_color=a855f7&text_color=a8a29e&hide_border=true" />
-</a>
+![Agentic](https://img.shields.io/badge/Agentic-a855f7?style=flat-square) ![LangGraph](https://img.shields.io/badge/LangGraph-1c1917?style=flat-square) ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+</td>
+<td width="50%" valign="top" align="left">
+
+#### [dag-doctor](https://github.com/mouadja02/dag-doctor)
+An AI assistant that explains failed Airflow DAGs, pinpoints the root cause, and suggests safe fixes.
+
+![AI Ops](https://img.shields.io/badge/AI_Ops-a855f7?style=flat-square) ![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white) ![LLM](https://img.shields.io/badge/LLM-1c1917?style=flat-square)
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="left">
+
+#### [CAG-Lab](https://github.com/mouadja02/CAG-Lab)
+Benchmarking Cache-Augmented Generation (CAG) against RAG for real-world knowledge systems.
+
+![Research](https://img.shields.io/badge/Research-a855f7?style=flat-square) ![RAG vs CAG](https://img.shields.io/badge/RAG_vs_CAG-1c1917?style=flat-square) ![Vector DB](https://img.shields.io/badge/Vector_DB-1c1917?style=flat-square)
+</td>
+<td width="50%" valign="top" align="left">
+
+#### [skills](https://github.com/mouadja02/skills)
+A curated collection of 149 agent skills for Claude Code & Cursor — engineering craft, AI agents, prompt engineering, and more.
+
+![149 skills](https://img.shields.io/badge/149_skills-a855f7?style=flat-square) ![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white) ![Cursor](https://img.shields.io/badge/Cursor-1c1917?style=flat-square&logo=cursor&logoColor=00f0ff)
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="left">
+
+#### [bitcoin-technical-indicators-dataset](https://github.com/mouadja02/bitcoin-technical-indicators-dataset)
+Bitcoin hourly OHLCV with 70+ technical indicators — a daily-updated dataset for ML & trading analysis.
+
+![Dataset](https://img.shields.io/badge/Dataset-00f0ff?style=flat-square) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![ML](https://img.shields.io/badge/ML-1c1917?style=flat-square)
+</td>
+<td width="50%" valign="top" align="left">
+
+#### [end2end-datawarehouse-project](https://github.com/mouadja02/end2end-datawarehouse-project)
+End-to-end data platform with real-time streaming and cloud processing — Kafka, Spark, AWS Glue, Snowflake, Iceberg.
+
+![Streaming](https://img.shields.io/badge/Streaming-00f0ff?style=flat-square) ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white) ![Spark](https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
+</td>
+</tr>
+</table>
 
 <sub>also brewing &nbsp;·&nbsp; <code>murmur</code> (local-LLM prompt overlay) &nbsp;·&nbsp; <code>mnemex</code> (LLM memory vault) &nbsp;·&nbsp; <code>neural-network-cuda</code> (NN from scratch → CUDA)</sub>
 
@@ -179,8 +209,8 @@ flowchart LR
 
 ## By the Numbers
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=mouadja02&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0a0a0f&title_color=00f0ff&icon_color=a855f7&text_color=a8a29e" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mouadja02&layout=compact&langs_count=8&hide_border=true&bg_color=0a0a0f&title_color=00f0ff&text_color=a8a29e" />
+<img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=mouadja02&theme=github_dark" />
+<img height="175" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mouadja02&theme=github_dark" />
 
 <br/>
 
