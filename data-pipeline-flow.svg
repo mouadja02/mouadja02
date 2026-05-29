@@ -1,141 +1,209 @@
-<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+<svg width="850" height="300" viewBox="0 0 850 300" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Data to Intelligence Pipeline">
   <defs>
-    <style>
-      .pipeline-stage {
-        fill: none;
-        stroke: #00f0ff;
-        stroke-width: 2;
-        opacity: 0.8;
-      }
-      .stage-text {
-        font-family: 'JetBrains Mono', 'Monaco', 'Menlo', monospace;
-        font-size: 10px;
-        fill: #a8a29e;
-        text-anchor: middle;
-      }
-      .stage-title {
-        font-size: 11px;
-        fill: #fafaf9;
-        font-weight: 600;
-      }
-      .data-flow {
-        fill: #00f0ff;
-        opacity: 0.6;
-      }
-      .flow-arrow {
-        stroke: #00f0ff;
-        stroke-width: 2;
-        fill: none;
-        marker-end: url(#arrowhead);
-        animation: pulse 2s ease-in-out infinite;
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 0.6; }
-        50% { opacity: 1; }
-      }
-    </style>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
-            refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#00f0ff"/>
-    </marker>
+    <radialGradient id="pl-bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#101019"/>
+      <stop offset="100%" stop-color="#08080c"/>
+    </radialGradient>
+    <linearGradient id="pl-bus" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="55%" stop-color="#7aa2ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="pl-title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="pl-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="pl-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+    <!-- "Intelligence" lightbulb: raw data becomes an idea. Centered at origin. -->
+    <g id="pl-bulb">
+      <circle cx="0" cy="-3.5" r="6" fill="#c084fc"/>
+      <path d="M -2.4,-4 L -0.6,-1.6 L 0.8,-5 L 2.4,-2.2" fill="none" stroke="#2e1065" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="-3" y="2.6" width="6" height="2" rx="1" fill="#a855f7"/>
+      <rect x="-2.4" y="5" width="4.8" height="1.8" rx="0.9" fill="#a855f7"/>
+      <line x1="-1.6" y1="7.4" x2="1.6" y2="7.4" stroke="#a855f7" stroke-width="1.4" stroke-linecap="round"/>
+      <g stroke="#f5d0fe" stroke-width="1.3" stroke-linecap="round">
+        <line x1="0" y1="-13" x2="0" y2="-10.6"/>
+        <line x1="-9.4" y1="-8" x2="-7.6" y2="-6.8"/>
+        <line x1="9.4" y1="-8" x2="7.6" y2="-6.8"/>
+        <line x1="-11" y1="-1.6" x2="-8.7" y2="-1.6"/>
+        <line x1="11" y1="-1.6" x2="8.7" y2="-1.6"/>
+      </g>
+    </g>
+    <!-- Stage-coherent operation icons (each centered at origin) -->
+    <!-- SOURCES: broadcast/signal waves (APIs · IoT · Streams) -->
+    <g id="ic-src" stroke-linecap="round">
+      <circle cx="0" cy="4" r="2.2" fill="#00f0ff"/>
+      <path d="M -4,0 A 5 5 0 0 1 4,0" fill="none" stroke="#00f0ff" stroke-width="1.5"/>
+      <path d="M -7,-3 A 9 9 0 0 1 7,-3" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.7"/>
+      <path d="M -10,-6 A 13 13 0 0 1 10,-6" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.4"/>
+    </g>
+    <!-- INGEST: funnel (Kafka · Airflow) -->
+    <g id="ic-ing">
+      <path d="M -9,-7 L 9,-7 L 2.6,1 L 2.6,8 L -2.6,8 L -2.6,1 Z" fill="none" stroke="#00f0ff" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="0" cy="10.5" r="1.5" fill="#00f0ff"/>
+    </g>
+    <!-- TRANSFORM: gear (Spark · dbt · Python) -->
+    <g id="ic-trf" stroke="#4fb6e8" stroke-width="1.7" stroke-linecap="round">
+      <circle cx="0" cy="0" r="4.4" fill="none"/>
+      <circle cx="0" cy="0" r="1.5" fill="#4fb6e8" stroke="none"/>
+      <line x1="0" y1="-8" x2="0" y2="-5.4"/>
+      <line x1="0" y1="8" x2="0" y2="5.4"/>
+      <line x1="-8" y1="0" x2="-5.4" y2="0"/>
+      <line x1="8" y1="0" x2="5.4" y2="0"/>
+      <line x1="-5.7" y1="-5.7" x2="-3.8" y2="-3.8"/>
+      <line x1="5.7" y1="-5.7" x2="3.8" y2="-3.8"/>
+      <line x1="-5.7" y1="5.7" x2="-3.8" y2="3.8"/>
+      <line x1="5.7" y1="5.7" x2="3.8" y2="3.8"/>
+    </g>
+    <!-- WAREHOUSE: database cylinder (Snowflake · Iceberg) -->
+    <g id="ic-wh" stroke="#7aa2ff" stroke-width="1.5" fill="none">
+      <ellipse cx="0" cy="-5.5" rx="6" ry="2.3"/>
+      <line x1="-6" y1="-5.5" x2="-6" y2="5.5"/>
+      <line x1="6" y1="-5.5" x2="6" y2="5.5"/>
+      <path d="M -6,0 A 6 2.3 0 0 0 6,0" opacity="0.6"/>
+      <path d="M -6,5.5 A 6 2.3 0 0 0 6,5.5"/>
+    </g>
+    <!-- VECTOR: embedding space / point cloud (Qdrant · Pinecone) -->
+    <g id="ic-vec">
+      <rect x="-7.5" y="-7.5" width="15" height="15" rx="2.5" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.5"/>
+      <g stroke="#a855f7" stroke-width="0.8" opacity="0.6">
+        <line x1="0.5" y1="0.5" x2="-3.5" y2="-2.5"/>
+        <line x1="0.5" y1="0.5" x2="3" y2="-4"/>
+        <line x1="0.5" y1="0.5" x2="4" y2="3.5"/>
+        <line x1="0.5" y1="0.5" x2="-2.5" y2="4"/>
+      </g>
+      <circle cx="-3.5" cy="-2.5" r="1.5" fill="#a855f7"/>
+      <circle cx="3" cy="-4" r="1.5" fill="#a855f7"/>
+      <circle cx="4" cy="3.5" r="1.5" fill="#a855f7"/>
+      <circle cx="-2.5" cy="4" r="1.5" fill="#a855f7"/>
+      <circle cx="0.5" cy="0.5" r="1.7" fill="#e9d5ff"/>
+    </g>
   </defs>
-  
-  <!-- Background -->
-  <rect width="800" height="300" fill="#0c0a09"/>
-  
-  <!-- Pipeline Stages -->
-  <!-- Data Sources -->
-  <rect x="50" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
-  <text x="90" y="125" class="stage-text stage-title">DATA</text>
-  <text x="90" y="140" class="stage-text stage-title">SOURCES</text>
-  <text x="90" y="162" class="stage-text">APIs</text>
-  <text x="90" y="178" class="stage-text">Databases</text>
-  
-  <!-- Ingestion -->
-  <rect x="180" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
-  <text x="220" y="125" class="stage-text stage-title">INGESTION</text>
-  <text x="220" y="150" class="stage-text">Airflow</text>
-  <text x="220" y="166" class="stage-text">Kafka</text>
-  <text x="220" y="182" class="stage-text">Spark Stream</text>
-  
-  <!-- Processing -->
-  <rect x="310" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
-  <text x="350" y="125" class="stage-text stage-title">PROCESSING</text>
-  <text x="350" y="150" class="stage-text">Apache Spark</text>
-  <text x="350" y="166" class="stage-text">Python</text>
-  <text x="350" y="182" class="stage-text">Databricks</text>
-  
-  <!-- Storage -->
-  <rect x="440" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
-  <text x="480" y="125" class="stage-text stage-title">STORAGE</text>
-  <text x="480" y="150" class="stage-text">Snowflake</text>
-  <text x="480" y="166" class="stage-text">PostgreSQL</text>
-  <text x="480" y="182" class="stage-text">Iceberg</text>
-  
-  <!-- ML & Analytics -->
-  <rect x="560" y="100" width="90" height="100" rx="10" class="pipeline-stage"/>
-  <text x="605" y="125" class="stage-text stage-title">ML &amp; ANALYTICS</text>
-  <text x="605" y="150" class="stage-text">TensorFlow</text>
-  <text x="605" y="166" class="stage-text">PyTorch</text>
-  <text x="605" y="182" class="stage-text">Pinecone</text>
-  
-  <!-- Deployment -->
-  <rect x="690" y="100" width="80" height="100" rx="10" class="pipeline-stage"/>
-  <text x="730" y="125" class="stage-text stage-title">DEPLOY</text>
-  <text x="730" y="150" class="stage-text">Docker</text>
-  <text x="730" y="166" class="stage-text">Terraform</text>
-  <text x="730" y="182" class="stage-text">Cloud</text>
-  
-  <!-- Flow Arrows -->
-  <path d="M 130 150 L 180 150" class="flow-arrow"/>
-  <path d="M 260 150 L 310 150" class="flow-arrow"/>
-  <path d="M 390 150 L 440 150" class="flow-arrow"/>
-  <path d="M 520 150 L 560 150" class="flow-arrow"/>
-  <path d="M 650 150 L 690 150" class="flow-arrow"/>
-  
-  <!-- Animated Data Flow Particles -->
-  <circle cx="150" cy="150" r="3" class="data-flow">
-    <animateTransform attributeName="transform" type="translate" 
-                      from="130"
-                      to="180" 
-                      dur="3s" repeatCount="indefinite"/>
-  </circle>
 
-  <circle cx="150" cy="150" r="3" fill="#00f0ff">
-    <animateTransform attributeName="transform" type="translate" 
-                      from="110"
-                      to="160" 
-                      begin="1s" dur="4s" repeatCount="indefinite"/>
-  </circle>
+  <rect width="850" height="300" rx="14" fill="url(#pl-bg)"/>
+  <rect width="850" height="300" rx="14" fill="url(#pl-grid)"/>
 
-  <circle cx="150" cy="150" r="3" fill="#00f0ff">
-    <animateTransform attributeName="transform" type="translate" 
-                      from="240"
-                      to="290" 
-                      begin="2s" dur="5s" repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="150" cy="150" r="3" fill="#00f0ff">
-    <animateTransform attributeName="transform" type="translate" 
-                      from="370"
-                      to="410" 
-                      begin="3s" dur="6s" repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="150" cy="150" r="3" fill="#00f0ff">
-    <animateTransform attributeName="transform" type="translate" 
-                      from="500"
-                      to="540" 
-                      begin="4s" dur="7s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Cloud Infrastructure Layer -->
-  <text x="400" y="50" class="stage-text" style="font-size: 13px; fill: #78716c;">
-    AWS • GCP • Cloudflare • Edge Computing
-  </text>
-  
   <!-- Title -->
-  <text x="400" y="280" class="stage-text" style="font-size: 16px; fill: #00f0ff; font-weight: 700;">
-    Data Engineering Pipeline
-  </text>
+  <text x="425" y="40" text-anchor="middle" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,monospace" font-size="15" font-weight="700" letter-spacing="3" fill="url(#pl-title)">DATA → INTELLIGENCE PIPELINE</text>
+  <text x="425" y="60" text-anchor="middle" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,monospace" font-size="10.5" letter-spacing="1" fill="#6b7280">raw signals become reasoning — end to end</text>
+
+  <!-- Data bus (behind cards) -->
+  <line x1="90" y1="172" x2="815" y2="172" stroke="url(#pl-bus)" stroke-width="2" stroke-opacity="0.45" stroke-dasharray="2 8" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" values="0;-100" dur="3s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Stage cards -->
+  <!-- 1 SOURCES -->
+  <g filter="url(#pl-glow)">
+    <rect x="35" y="110" width="110" height="104" rx="12" fill="#0d1117" fill-opacity="0.85" stroke="#00f0ff" stroke-width="1.4"/>
+  </g>
+  <text x="49" y="128" font-family="ui-monospace,monospace" font-size="9" fill="#00f0ff" opacity="0.6">01</text>
+  <text x="90" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#e7faff">SOURCES</text>
+  <line x1="55" y1="156" x2="125" y2="156" stroke="#00f0ff" stroke-opacity="0.25"/>
+  <text x="90" y="188" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9aa4b2">APIs · IoT</text>
+  <text x="90" y="204" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9aa4b2">Streams</text>
+
+  <!-- 2 INGEST -->
+  <g filter="url(#pl-glow)">
+    <rect x="169" y="110" width="110" height="104" rx="12" fill="#0d1117" fill-opacity="0.85" stroke="#00f0ff" stroke-width="1.4"/>
+  </g>
+  <text x="183" y="128" font-family="ui-monospace,monospace" font-size="9" fill="#00f0ff" opacity="0.6">02</text>
+  <text x="224" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#e7faff">INGEST</text>
+  <line x1="189" y1="156" x2="259" y2="156" stroke="#00f0ff" stroke-opacity="0.25"/>
+  <text x="224" y="188" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9aa4b2">Kafka</text>
+  <text x="224" y="204" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9aa4b2">Airflow</text>
+
+  <!-- 3 TRANSFORM -->
+  <g filter="url(#pl-glow)">
+    <rect x="303" y="110" width="110" height="104" rx="12" fill="#0d1117" fill-opacity="0.85" stroke="#4fb6e8" stroke-width="1.4"/>
+  </g>
+  <text x="317" y="128" font-family="ui-monospace,monospace" font-size="9" fill="#4fb6e8" opacity="0.7">03</text>
+  <text x="358" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#eef3ff">TRANSFORM</text>
+  <line x1="323" y1="156" x2="393" y2="156" stroke="#4fb6e8" stroke-opacity="0.3"/>
+  <text x="358" y="188" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9aa4b2">Spark · dbt</text>
+  <text x="358" y="204" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9aa4b2">Python</text>
+
+  <!-- 4 WAREHOUSE -->
+  <g filter="url(#pl-glow)">
+    <rect x="437" y="110" width="110" height="104" rx="12" fill="#0d1117" fill-opacity="0.85" stroke="#7aa2ff" stroke-width="1.4"/>
+  </g>
+  <text x="451" y="128" font-family="ui-monospace,monospace" font-size="9" fill="#7aa2ff" opacity="0.7">04</text>
+  <text x="492" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#eef0ff">WAREHOUSE</text>
+  <line x1="457" y1="156" x2="527" y2="156" stroke="#7aa2ff" stroke-opacity="0.3"/>
+  <text x="492" y="188" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9aa4b2">Snowflake</text>
+  <text x="492" y="204" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#9aa4b2">Iceberg</text>
+
+  <!-- 5 VECTOR -->
+  <g filter="url(#pl-glow)">
+    <rect x="571" y="110" width="110" height="104" rx="12" fill="#0d1117" fill-opacity="0.85" stroke="#a855f7" stroke-width="1.4"/>
+  </g>
+  <text x="585" y="128" font-family="ui-monospace,monospace" font-size="9" fill="#a855f7" opacity="0.8">05</text>
+  <text x="626" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#f5ecff">VECTOR</text>
+  <line x1="591" y1="156" x2="661" y2="156" stroke="#a855f7" stroke-opacity="0.35"/>
+  <text x="626" y="188" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#b6a6c9">Qdrant</text>
+  <text x="626" y="204" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#b6a6c9">Pinecone</text>
+
+  <!-- 6 AGENTS -->
+  <g filter="url(#pl-glow)">
+    <rect x="705" y="110" width="110" height="104" rx="12" fill="#0d1117" fill-opacity="0.85" stroke="#a855f7" stroke-width="1.4"/>
+  </g>
+  <text x="719" y="128" font-family="ui-monospace,monospace" font-size="9" fill="#a855f7" opacity="0.8">06</text>
+  <text x="760" y="146" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#f5ecff">AGENTS</text>
+  <line x1="725" y1="156" x2="795" y2="156" stroke="#a855f7" stroke-opacity="0.35"/>
+  <text x="760" y="188" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#b6a6c9">LangGraph</text>
+  <text x="760" y="204" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#b6a6c9">LangChain</text>
+
+  <!-- Direction chevrons in gaps -->
+  <g stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <path d="M153,167 l7,5 l-7,5" stroke="#00f0ff"/>
+    <path d="M287,167 l7,5 l-7,5" stroke="#35a7e0"/>
+    <path d="M421,167 l7,5 l-7,5" stroke="#7aa2ff"/>
+    <path d="M555,167 l7,5 l-7,5" stroke="#9b7bf0"/>
+    <path d="M689,167 l7,5 l-7,5" stroke="#a855f7"/>
+  </g>
+
+  <!-- Each packet DWELLS at every stage and MORPHS into that stage's operation icon
+       (signal -> funnel -> gear -> database -> vectors -> idea), growing as it goes.
+       Two staggered packets keep the pipeline alive. dur=12s, 6 stations. -->
+  <g>
+    <!-- ===== Packet A (begin 0s) ===== -->
+    <g>
+      <circle r="0" fill="#00f0ff" filter="url(#pl-glow)">
+        <animate attributeName="fill" values="#00f0ff;#00f0ff;#7aa2ff;#a855f7;#a855f7" keyTimes="0;0.4;0.55;0.7;1" dur="12s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="0;0;2.8;2.8;0;0;3.6;3.6;0;0;4.4;4.4;0;0;5.2;5.2;0;0;6;6;0;0" keyTimes="0;0.09;0.11;0.16;0.18;0.27;0.29;0.34;0.36;0.45;0.47;0.53;0.55;0.64;0.66;0.71;0.73;0.82;0.84;0.89;0.91;1" dur="12s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <use href="#ic-src" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.025;0.07;0.09;1" dur="12s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;1;1;0;0" keyTimes="0;0.03;0.07;0.09;1" dur="12s" begin="0s" repeatCount="indefinite"/></use>
+      <use href="#ic-ing" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.18;0.205;0.245;0.27;1" dur="12s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1;0;0" keyTimes="0;0.18;0.21;0.245;0.27;1" dur="12s" begin="0s" repeatCount="indefinite"/></use>
+      <use href="#ic-trf" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.36;0.385;0.425;0.45;1" dur="12s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1;0;0" keyTimes="0;0.36;0.39;0.425;0.45;1" dur="12s" begin="0s" repeatCount="indefinite"/></use>
+      <use href="#ic-wh" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.55;0.575;0.615;0.64;1" dur="12s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1;0;0" keyTimes="0;0.55;0.58;0.615;0.64;1" dur="12s" begin="0s" repeatCount="indefinite"/></use>
+      <use href="#ic-vec" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.73;0.755;0.795;0.82;1" dur="12s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1;0;0" keyTimes="0;0.73;0.76;0.795;0.82;1" dur="12s" begin="0s" repeatCount="indefinite"/></use>
+      <use href="#pl-bulb" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.91;0.935;0.99;1" dur="12s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1.1;1;1;0" keyTimes="0;0.91;0.94;0.965;0.99;1" dur="12s" begin="0s" repeatCount="indefinite"/></use>
+      <animateMotion dur="12s" begin="0s" repeatCount="indefinite" calcMode="linear" path="M 90 172 L 760 172"
+        keyPoints="0;0;0.2;0.2;0.4;0.4;0.6;0.6;0.8;0.8;1;1" keyTimes="0;0.09;0.18;0.27;0.36;0.45;0.55;0.64;0.73;0.82;0.91;1"/>
+    </g>
+    <!-- ===== Packet B (begin 6s) ===== -->
+    <g>
+      <circle r="0" fill="#00f0ff" filter="url(#pl-glow)">
+        <animate attributeName="fill" values="#00f0ff;#00f0ff;#7aa2ff;#a855f7;#a855f7" keyTimes="0;0.4;0.55;0.7;1" dur="12s" begin="6s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="0;0;2.8;2.8;0;0;3.6;3.6;0;0;4.4;4.4;0;0;5.2;5.2;0;0;6;6;0;0" keyTimes="0;0.09;0.11;0.16;0.18;0.27;0.29;0.34;0.36;0.45;0.47;0.53;0.55;0.64;0.66;0.71;0.73;0.82;0.84;0.89;0.91;1" dur="12s" begin="6s" repeatCount="indefinite"/>
+      </circle>
+      <use href="#ic-src" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.025;0.07;0.09;1" dur="12s" begin="6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;1;1;0;0" keyTimes="0;0.03;0.07;0.09;1" dur="12s" begin="6s" repeatCount="indefinite"/></use>
+      <use href="#ic-ing" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.18;0.205;0.245;0.27;1" dur="12s" begin="6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1;0;0" keyTimes="0;0.18;0.21;0.245;0.27;1" dur="12s" begin="6s" repeatCount="indefinite"/></use>
+      <use href="#ic-trf" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.36;0.385;0.425;0.45;1" dur="12s" begin="6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1;0;0" keyTimes="0;0.36;0.39;0.425;0.45;1" dur="12s" begin="6s" repeatCount="indefinite"/></use>
+      <use href="#ic-wh" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.55;0.575;0.615;0.64;1" dur="12s" begin="6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1;0;0" keyTimes="0;0.55;0.58;0.615;0.64;1" dur="12s" begin="6s" repeatCount="indefinite"/></use>
+      <use href="#ic-vec" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.73;0.755;0.795;0.82;1" dur="12s" begin="6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1;1;0;0" keyTimes="0;0.73;0.76;0.795;0.82;1" dur="12s" begin="6s" repeatCount="indefinite"/></use>
+      <use href="#pl-bulb" opacity="0" filter="url(#pl-glow)"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.91;0.935;0.99;1" dur="12s" begin="6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="0;0;1.1;1;1;0" keyTimes="0;0.91;0.94;0.965;0.99;1" dur="12s" begin="6s" repeatCount="indefinite"/></use>
+      <animateMotion dur="12s" begin="6s" repeatCount="indefinite" calcMode="linear" path="M 90 172 L 760 172"
+        keyPoints="0;0;0.2;0.2;0.4;0.4;0.6;0.6;0.8;0.8;1;1" keyTimes="0;0.09;0.18;0.27;0.36;0.45;0.55;0.64;0.73;0.82;0.91;1"/>
+    </g>
+  </g>
+
+  <!-- Output -> serve -->
+  <text x="425" y="262" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2" fill="#52525b">AWS · GCP · CLOUDFLARE · DOCKER · TERRAFORM</text>
 </svg>

@@ -1,0 +1,75 @@
+<svg width="850" height="250" viewBox="0 0 850 250" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Mouad Jaouhari - Data and AI Engineer">
+  <defs>
+    <linearGradient id="hdr-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="55%" stop-color="#7aa2ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="hdr-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="hdr-vignette" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#11111b"/>
+      <stop offset="100%" stop-color="#08080c"/>
+    </radialGradient>
+    <pattern id="hdr-grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="hdr-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="hdr-type"><rect x="277" y="176" width="0" height="26">
+      <animate attributeName="width" values="0;0;300;300" keyTimes="0;0.12;0.72;1" dur="6s" repeatCount="indefinite"/>
+    </rect></clipPath>
+  </defs>
+
+  <rect width="850" height="250" rx="16" fill="url(#hdr-vignette)"/>
+  <rect width="850" height="250" rx="16" fill="url(#hdr-grid)"/>
+
+  <rect x="-200" y="0" width="200" height="250" fill="#00f0ff" opacity="0.04">
+    <animate attributeName="x" values="-220;900" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <g fill="#00f0ff">
+    <circle cx="120" cy="60" r="1.8" opacity="0.5"><animate attributeName="cy" values="60;40;60" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.7;0.2" dur="9s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="180" r="2.2" fill="#a855f7" opacity="0.5"><animate attributeName="cy" values="180;205;180" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="640" cy="55" r="1.6" fill="#a855f7" opacity="0.4"><animate attributeName="cy" values="55;75;55" dur="8s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="200" r="1.5" opacity="0.4"><animate attributeName="cy" values="200;180;200" dur="10s" repeatCount="indefinite"/></circle>
+    <circle cx="790" cy="110" r="1.5" opacity="0.4"><animate attributeName="cx" values="790;770;790" dur="12s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <g stroke="#00f0ff" stroke-width="1.6" opacity="0.55">
+    <path d="M16 40 L16 16 L40 16"/>
+    <path d="M834 40 L834 16 L810 16" stroke="#a855f7"/>
+    <path d="M16 210 L16 234 L40 234" stroke="#a855f7"/>
+    <path d="M834 210 L834 234 L810 234"/>
+  </g>
+
+  <g transform="translate(640,30)">
+    <rect x="0" y="0" width="172" height="24" rx="12" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-opacity="0.4"/>
+    <circle cx="16" cy="12" r="4" fill="#22ff9b">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="30" y="16" font-family="ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="11" letter-spacing="1.5" fill="#d6f7ff">SYSTEMS ONLINE</text>
+  </g>
+
+  <text x="40" y="118" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="52" font-weight="800" letter-spacing="-1" fill="url(#hdr-grad)" filter="url(#hdr-glow)">MOUAD JAOUHARI</text>
+
+  <rect x="42" y="132" width="0" height="3" rx="1.5" fill="url(#hdr-line)">
+    <animate attributeName="width" values="0;560" dur="1.3s" begin="0.2s" fill="freeze"/>
+  </rect>
+
+  <text x="44" y="164" font-family="ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="17" font-weight="600" letter-spacing="5" fill="#e7e5e4">DATA &amp; AI ENGINEER</text>
+
+  <g clip-path="url(#hdr-type)">
+    <text x="280" y="196" font-family="ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="15" fill="#00f0ff">architecting agentic data systems</text>
+  </g>
+  <text x="280" y="196" font-family="ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace" font-size="15" fill="#7c8896">&#62;</text>
+  <rect x="280" y="183" width="9" height="16" fill="#a855f7">
+    <animate attributeName="x" values="295;295;575;575" keyTimes="0;0.12;0.72;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

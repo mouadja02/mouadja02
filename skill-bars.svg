@@ -1,111 +1,95 @@
-<svg width="600" height="420" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+<svg width="760" height="380" viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Capability Matrix">
   <defs>
-    <style>
-      .skill-label {
-        font-family: 'JetBrains Mono', 'Monaco', 'Menlo', monospace;
-        font-size: 13px;
-        fill: #fafaf9;
-        font-weight: 500;
-      }
-      .skill-bar-bg {
-        fill: #1c1917;
-        stroke: #292524;
-        stroke-width: 1;
-        rx: 10;
-      }
-      .skill-bar-fill {
-        fill: url(#gradient);
-        rx: 10;
-      }
-      .percentage {
-        font-family: 'JetBrains Mono', 'Monaco', 'Menlo', monospace;
-        font-size: 12px;
-        fill: #78716c;
-      }
-    </style>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    <radialGradient id="sb-bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#101019"/>
+      <stop offset="100%" stop-color="#08080c"/>
+    </radialGradient>
+    <linearGradient id="sb-cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#067a8e"/>
+      <stop offset="100%" stop-color="#00f0ff"/>
     </linearGradient>
+    <linearGradient id="sb-violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5b21b6"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="sb-title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="sb-glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  
-  <!-- Background -->
-  <rect width="600" height="420" fill="#0c0a09"/>
-  
-  <!-- Title -->
-  <text x="300" y="40" class="skill-label" style="font-size: 18px; text-anchor: middle; fill: #00f0ff; font-weight: 700;">
-    Technical Proficiency
-  </text>
-  
-  <!-- Python -->
-  <text x="50" y="85" class="skill-label">Python</text>
-  <rect x="150" y="70" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="70" width="270" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;270" dur="2s" begin="0.5s" fill="freeze"/>
-  </rect>
-  <text x="460" y="85" class="percentage">90%</text>
-  
-  <!-- Cloud Platforms (AWS/GCP) -->
-  <text x="50" y="125" class="skill-label">Cloud Platforms</text>
-  <rect x="150" y="110" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="110" width="255" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;255" dur="2s" begin="0.7s" fill="freeze"/>
-  </rect>
-  <text x="460" y="125" class="percentage">85%</text>
-  
-  <!-- Apache Spark -->
-  <text x="50" y="165" class="skill-label">Apache Spark</text>
-  <rect x="150" y="150" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="150" width="240" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;240" dur="2s" begin="0.9s" fill="freeze"/>
-  </rect>
-  <text x="460" y="165" class="percentage">80%</text>
-  
-  <!-- Machine Learning -->
-  <text x="50" y="205" class="skill-label">Machine Learning</text>
-  <rect x="150" y="190" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="190" width="240" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;240" dur="2s" begin="1.1s" fill="freeze"/>
-  </rect>
-  <text x="460" y="205" class="percentage">80%</text>
-  
-  <!-- Data Warehousing -->
-  <text x="50" y="245" class="skill-label">Data Warehousing</text>
-  <rect x="150" y="230" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="230" width="225" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;225" dur="2s" begin="1.3s" fill="freeze"/>
-  </rect>
-  <text x="460" y="245" class="percentage">75%</text>
-  
-  <!-- Docker/Containerization -->
-  <text x="50" y="285" class="skill-label">Docker</text>
-  <rect x="150" y="270" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="270" width="210" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;210" dur="2s" begin="1.5s" fill="freeze"/>
-  </rect>
-  <text x="460" y="285" class="percentage">70%</text>
-  
-  <!-- SQL Databases -->
-  <text x="50" y="325" class="skill-label">SQL Databases</text>
-  <rect x="150" y="310" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="310" width="255" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;255" dur="2s" begin="1.7s" fill="freeze"/>
-  </rect>
-  <text x="460" y="325" class="percentage">85%</text>
-  
-  <!-- Workflow Orchestration -->
-  <text x="50" y="365" class="skill-label">Airflow</text>
-  <rect x="150" y="350" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="350" width="195" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;195" dur="2s" begin="1.9s" fill="freeze"/>
-  </rect>
-  <text x="460" y="365" class="percentage">65%</text>
 
-  <!-- AI Automation -->
-  <text x="50" y="405" class="skill-label">AI Automation</text>
-  <rect x="150" y="390" width="300" height="20" class="skill-bar-bg"/>
-  <rect x="150" y="390" width="225" height="20" class="skill-bar-fill">
-    <animate attributeName="width" values="0;225" dur="2s" begin="2.1s" fill="freeze"/>
-  </rect>
-  <text x="460" y="405" class="percentage">75%</text>
+  <rect width="760" height="380" rx="14" fill="url(#sb-bg)"/>
+
+  <!-- Title -->
+  <text x="380" y="38" text-anchor="middle" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,monospace" font-size="15" font-weight="700" letter-spacing="3" fill="url(#sb-title)">CAPABILITY MATRIX</text>
+  <text x="380" y="57" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" letter-spacing="1.5" fill="#6b7280">data engineering × agentic ai</text>
+
+  <!-- Divider -->
+  <line x1="380" y1="86" x2="380" y2="350" stroke="#ffffff" stroke-opacity="0.07"/>
+
+  <!-- Column headers -->
+  <circle cx="46" cy="80" r="4" fill="#00f0ff"/>
+  <text x="58" y="84" font-family="ui-monospace,monospace" font-size="12" font-weight="700" letter-spacing="2" fill="#00f0ff">DATA ENGINEERING</text>
+  <circle cx="406" cy="80" r="4" fill="#a855f7"/>
+  <text x="418" y="84" font-family="ui-monospace,monospace" font-size="12" font-weight="700" letter-spacing="2" fill="#c084fc">AGENTIC AI</text>
+
+  <!-- ===== LEFT COLUMN (cyan) ===== -->
+  <g font-family="ui-monospace,monospace" font-size="11" fill="#d6e6ea">
+    <text x="40" y="116">Pipelines &amp; Orchestration</text>
+    <rect x="40" y="123" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="40" y="123" width="0" height="9" rx="4.5" fill="url(#sb-cyan)" filter="url(#sb-glow)"><animate attributeName="width" values="0;276" dur="1.4s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="348" y="132" font-size="10" fill="#5f7480">92</text>
+
+    <text x="40" y="170">Spark / Streaming</text>
+    <rect x="40" y="177" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="40" y="177" width="0" height="9" rx="4.5" fill="url(#sb-cyan)" filter="url(#sb-glow)"><animate attributeName="width" values="0;255" dur="1.4s" begin="0.45s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="348" y="186" font-size="10" fill="#5f7480">85</text>
+
+    <text x="40" y="224">Snowflake / Warehouse</text>
+    <rect x="40" y="231" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="40" y="231" width="0" height="9" rx="4.5" fill="url(#sb-cyan)" filter="url(#sb-glow)"><animate attributeName="width" values="0;264" dur="1.4s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="348" y="240" font-size="10" fill="#5f7480">88</text>
+
+    <text x="40" y="278">SQL / Data Modeling</text>
+    <rect x="40" y="285" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="40" y="285" width="0" height="9" rx="4.5" fill="url(#sb-cyan)" filter="url(#sb-glow)"><animate attributeName="width" values="0;270" dur="1.4s" begin="0.75s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="348" y="294" font-size="10" fill="#5f7480">90</text>
+
+    <text x="40" y="332">Cloud (AWS / GCP)</text>
+    <rect x="40" y="339" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="40" y="339" width="0" height="9" rx="4.5" fill="url(#sb-cyan)" filter="url(#sb-glow)"><animate attributeName="width" values="0;246" dur="1.4s" begin="0.9s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="348" y="348" font-size="10" fill="#5f7480">82</text>
+  </g>
+
+  <!-- ===== RIGHT COLUMN (violet) ===== -->
+  <g font-family="ui-monospace,monospace" font-size="11" fill="#e7ddf5">
+    <text x="400" y="116">LangGraph / LangChain</text>
+    <rect x="400" y="123" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="400" y="123" width="0" height="9" rx="4.5" fill="url(#sb-violet)" filter="url(#sb-glow)"><animate attributeName="width" values="0;258" dur="1.4s" begin="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="708" y="132" font-size="10" fill="#7c6a90">86</text>
+
+    <text x="400" y="170">RAG / CAG / Vector DBs</text>
+    <rect x="400" y="177" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="400" y="177" width="0" height="9" rx="4.5" fill="url(#sb-violet)" filter="url(#sb-glow)"><animate attributeName="width" values="0;264" dur="1.4s" begin="0.55s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="708" y="186" font-size="10" fill="#7c6a90">88</text>
+
+    <text x="400" y="224">LLM Dev Tooling</text>
+    <rect x="400" y="231" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="400" y="231" width="0" height="9" rx="4.5" fill="url(#sb-violet)" filter="url(#sb-glow)"><animate attributeName="width" values="0;276" dur="1.4s" begin="0.7s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="708" y="240" font-size="10" fill="#7c6a90">92</text>
+
+    <text x="400" y="278">Prompt Engineering</text>
+    <rect x="400" y="285" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="400" y="285" width="0" height="9" rx="4.5" fill="url(#sb-violet)" filter="url(#sb-glow)"><animate attributeName="width" values="0;264" dur="1.4s" begin="0.85s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="708" y="294" font-size="10" fill="#7c6a90">88</text>
+
+    <text x="400" y="332">Python / ML</text>
+    <rect x="400" y="339" width="300" height="9" rx="4.5" fill="#161b22"/>
+    <rect x="400" y="339" width="0" height="9" rx="4.5" fill="url(#sb-violet)" filter="url(#sb-glow)"><animate attributeName="width" values="0;270" dur="1.4s" begin="1.0s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/></rect>
+    <text x="708" y="348" font-size="10" fill="#7c6a90">90</text>
+  </g>
 </svg>

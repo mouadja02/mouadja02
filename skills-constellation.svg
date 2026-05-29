@@ -1,95 +1,113 @@
-<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+<svg width="850" height="420" viewBox="0 0 850 420" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Technical Stack Constellation">
   <defs>
-    <style>
-      .constellation-line {
-        stroke: #78716c;
-        stroke-width: 1;
-        opacity: 0.3;
-        animation: pulse 3s ease-in-out infinite;
-      }
-      .tech-node {
-        fill: #0c0a09;
-        stroke: #00f0ff;
-        stroke-width: 2;
-        animation: glow 2s ease-in-out infinite alternate;
-      }
-      .tech-text {
-        font-family: 'JetBrains Mono', 'Monaco', 'Menlo', monospace;
-        font-size: 11px;
-        fill: #fafaf9;
-        text-anchor: middle;
-        dominant-baseline: central;
-      }
-      .primary-node {
-        fill: #00f0ff;
-        animation: mainGlow 2s ease-in-out infinite alternate;
-      }
-      .primary-text {
-        fill: #0c0a09;
-        font-weight: 700;
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 0.8; }
-      }
-      @keyframes glow {
-        0% { filter: drop-shadow(0 0 5px #00f0ff); }
-        100% { filter: drop-shadow(0 0 15px #00f0ff); }
-      }
-      @keyframes mainGlow {
-        0% { filter: drop-shadow(0 0 10px #00f0ff); }
-        100% { filter: drop-shadow(0 0 25px #00f0ff); }
-      }
-    </style>
+    <radialGradient id="cs-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#101019"/>
+      <stop offset="100%" stop-color="#08080c"/>
+    </radialGradient>
+    <radialGradient id="cs-core" cx="40%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="60%" stop-color="#6f7bff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </radialGradient>
+    <filter id="cs-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="cs-grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#ffffff" stroke-opacity="0.028" stroke-width="1"/>
+    </pattern>
   </defs>
-  
-  <!-- Background -->
-  <rect width="800" height="400" fill="#0c0a09"/>
-  
-  <!-- Constellation Lines -->
-  <line x1="400" y1="200" x2="200" y2="100" class="constellation-line"/>
-  <line x1="400" y1="200" x2="600" y2="100" class="constellation-line"/>
-  <line x1="400" y1="200" x2="150" y2="250" class="constellation-line"/>
-  <line x1="400" y1="200" x2="650" y2="250" class="constellation-line"/>
-  <line x1="400" y1="200" x2="300" y2="320" class="constellation-line"/>
-  <line x1="400" y1="200" x2="500" y2="320" class="constellation-line"/>
-  <line x1="200" y1="100" x2="150" y2="250" class="constellation-line"/>
-  <line x1="600" y1="100" x2="650" y2="250" class="constellation-line"/>
-  <line x1="300" y1="320" x2="500" y2="320" class="constellation-line"/>
-  
-  <!-- Central Node - Data Engineering -->
-  <circle cx="400" cy="200" r="42" class="tech-node primary-node"/>
-  <text x="400" y="192" class="tech-text primary-text">DATA</text>
-  <text x="400" y="208" class="tech-text primary-text">ENGINEERING</text>
-  
-  <!-- Tech Stack Nodes -->
-  <circle cx="200" cy="100" r="20" class="tech-node"/>
-  <text x="200" y="100" class="tech-text">GCP</text>
-  
-  <circle cx="600" cy="100" r="28" class="tech-node"/>
-  <text x="600" y="100" class="tech-text">AWS</text>
-  
-  <circle cx="150" cy="250" r="32" class="tech-node"/>
-  <text x="150" y="250" class="tech-text">Python</text>
-  
-  <circle cx="650" cy="250" r="22" class="tech-node"/>
-  <text x="650" y="250" class="tech-text">Spark</text>
-  
-  <circle cx="300" cy="320" r="26" class="tech-node"/>
-  <text x="300" y="320" class="tech-text">ML / AI</text>
-  
-  <circle cx="500" cy="320" r="24" class="tech-node"/>
-  <text x="500" y="320" class="tech-text">Docker</text>
-  
-  <!-- Additional smaller nodes -->
-  <circle cx="100" cy="150" r="22" class="tech-node"/>
-  <text x="100" y="150" class="tech-text">SQL</text>
-  
-  <circle cx="700" cy="150" r="26" class="tech-node"/>
-  <text x="700" y="142" class="tech-text">Snow</text>
-  <text x="700" y="158" class="tech-text">flake</text>
-  
-  <!-- Connecting lines for smaller nodes -->
-  <line x1="200" y1="100" x2="100" y2="150" class="constellation-line"/>
-  <line x1="600" y1="100" x2="700" y2="150" class="constellation-line"/>
+
+  <rect width="850" height="420" rx="14" fill="url(#cs-bg)"/>
+  <rect width="850" height="420" rx="14" fill="url(#cs-grid)"/>
+
+  <!-- Title -->
+  <text x="26" y="30" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,monospace" font-size="13" font-weight="700" letter-spacing="2.5" fill="#e7e5e4">AGENT ORCHESTRATION GRAPH</text>
+  <text x="26" y="48" font-family="ui-monospace,monospace" font-size="10" letter-spacing="0.5" fill="#6b7280">a stack that plans, calls tools &amp; reasons over data</text>
+
+  <!-- Legend -->
+  <g font-family="ui-monospace,monospace" font-size="9.5" letter-spacing="0.5">
+    <circle cx="556" cy="26" r="4" fill="#00f0ff"/><text x="566" y="29" fill="#9aa4b2">DATA ENGINE</text>
+    <circle cx="664" cy="26" r="4" fill="#f472b6"/><text x="674" y="29" fill="#9aa4b2">VECTOR MEMORY</text>
+    <circle cx="790" cy="26" r="4" fill="#a855f7"/><text x="800" y="29" fill="#9aa4b2">AGENTS</text>
+  </g>
+
+  <!-- ===== Edges (core -> nodes) ===== -->
+  <g stroke-width="1.2" fill="none">
+    <line x1="425" y1="215" x2="425" y2="65"  stroke="#a855f7" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="619" y2="92"  stroke="#a855f7" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="739" y2="166" stroke="#a855f7" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="739" y2="258" stroke="#a855f7" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="619" y2="332" stroke="#a855f7" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="425" y2="360" stroke="#f472b6" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="231" y2="332" stroke="#f472b6" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="111" y2="258" stroke="#00f0ff" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="111" y2="166" stroke="#00f0ff" stroke-opacity="0.30"/>
+    <line x1="425" y1="215" x2="231" y2="92"  stroke="#00f0ff" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Faint constellation lattice between neighbours -->
+  <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" fill="none">
+    <path d="M425,65 L619,92 L739,166 L739,258 L619,332 L425,360 L231,332 L111,258 L111,166 L231,92 Z"/>
+  </g>
+
+  <!-- Rotating dashed thinking ring -->
+  <circle cx="425" cy="215" r="70" fill="none" stroke="#7aa2ff" stroke-opacity="0.35" stroke-width="1.2" stroke-dasharray="3 10">
+    <animateTransform attributeName="transform" type="rotate" from="0 425 215" to="360 425 215" dur="18s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ===== Tool-call pulses (core -> node) ===== -->
+  <g>
+    <circle r="3" fill="#a855f7" filter="url(#cs-glow)"><animateMotion path="M425,215 L425,65"  dur="2.2s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#a855f7" filter="url(#cs-glow)"><animateMotion path="M425,215 L619,92"  dur="2.2s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#a855f7" filter="url(#cs-glow)"><animateMotion path="M425,215 L739,166" dur="2.2s" begin="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#a855f7" filter="url(#cs-glow)"><animateMotion path="M425,215 L739,258" dur="2.2s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#a855f7" filter="url(#cs-glow)"><animateMotion path="M425,215 L619,332" dur="2.2s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="1.6s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#f472b6" filter="url(#cs-glow)"><animateMotion path="M425,215 L425,360" dur="2.2s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#f472b6" filter="url(#cs-glow)"><animateMotion path="M425,215 L231,332" dur="2.2s" begin="1.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="1.0s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#00f0ff" filter="url(#cs-glow)"><animateMotion path="M425,215 L111,258" dur="2.2s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="1.4s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#00f0ff" filter="url(#cs-glow)"><animateMotion path="M425,215 L111,166" dur="2.2s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="1.8s" repeatCount="indefinite"/></circle>
+    <circle r="3" fill="#00f0ff" filter="url(#cs-glow)"><animateMotion path="M425,215 L231,92"  dur="2.2s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="2.2s" begin="0.2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- ===== Satellite nodes ===== -->
+  <!-- Agents (violet) -->
+  <g font-family="ui-monospace,monospace" font-size="11" fill="#ede9fe">
+    <circle cx="425" cy="65"  r="13" fill="#0d0b14" stroke="#a855f7" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="0s" repeatCount="indefinite"/></circle>
+    <text x="425" y="46" text-anchor="middle">LangGraph</text>
+    <circle cx="619" cy="92"  r="13" fill="#0d0b14" stroke="#a855f7" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <text x="619" y="73" text-anchor="middle">LangChain</text>
+    <circle cx="739" cy="166" r="13" fill="#0d0b14" stroke="#a855f7" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+    <text x="760" y="170" text-anchor="start">Claude Code</text>
+    <circle cx="739" cy="258" r="13" fill="#0d0b14" stroke="#a855f7" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <text x="760" y="262" text-anchor="start">Cursor</text>
+    <circle cx="619" cy="332" r="13" fill="#0d0b14" stroke="#a855f7" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="2s" repeatCount="indefinite"/></circle>
+    <text x="619" y="361" text-anchor="middle">OpenAI Codex</text>
+  </g>
+  <!-- Vector memory (pink) -->
+  <g font-family="ui-monospace,monospace" font-size="11" fill="#fde7f3">
+    <circle cx="425" cy="360" r="13" fill="#140b11" stroke="#f472b6" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <text x="425" y="389" text-anchor="middle">Pinecone</text>
+    <circle cx="231" cy="332" r="13" fill="#140b11" stroke="#f472b6" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="1.3s" repeatCount="indefinite"/></circle>
+    <text x="231" y="361" text-anchor="middle">Qdrant</text>
+  </g>
+  <!-- Data engine (cyan) -->
+  <g font-family="ui-monospace,monospace" font-size="11" fill="#e7faff">
+    <circle cx="111" cy="258" r="13" fill="#08131a" stroke="#00f0ff" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="1.7s" repeatCount="indefinite"/></circle>
+    <text x="90" y="262" text-anchor="end">Snowflake</text>
+    <circle cx="111" cy="166" r="13" fill="#08131a" stroke="#00f0ff" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="2.2s" repeatCount="indefinite"/></circle>
+    <text x="90" y="170" text-anchor="end">Spark</text>
+    <circle cx="231" cy="92"  r="13" fill="#08131a" stroke="#00f0ff" stroke-width="1.8" filter="url(#cs-glow)"><animate attributeName="r" values="13;14.5;13" dur="3s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <text x="231" y="73" text-anchor="middle">Python</text>
+  </g>
+
+  <!-- ===== Core ===== -->
+  <circle cx="425" cy="215" r="52" fill="none" stroke="#00f0ff" stroke-opacity="0.15" stroke-width="1">
+    <animate attributeName="r" values="46;58;46" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="0.35;0;0.35" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="425" cy="215" r="46" fill="url(#cs-core)" filter="url(#cs-glow)"/>
+  <circle cx="425" cy="215" r="46" fill="#08080c" fill-opacity="0.55"/>
+  <text x="425" y="210" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="700" letter-spacing="1" fill="#ffffff">TECHNICAL</text>
+  <text x="425" y="228" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="700" letter-spacing="1" fill="#ffffff">STACK</text>
 </svg>
