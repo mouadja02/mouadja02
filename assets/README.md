@@ -1,13 +1,15 @@
 # Profile artwork
 
-The masthead follows the portfolio's warm neutrals with one cyan accent. The original drawing turns irregular signal traces into ordered paths, connecting Mouad's signal-processing background to his work on data systems.
+The profile follows the portfolio at [mouadja02.github.io](https://mouadja02.github.io/): an IC datasheet for part MJ02. The header is the datasheet's title block, with a noisy signal cleaned up by a pipeline and a model. The pinout shows the tech stack as a 20-pin package.
 
-- Dark: charcoal `#131414`, warm white `#fafaf9`, stone `#a8a29e`, cyan `#00f0ff`.
-- Light: warm white `#fafaf9`, charcoal `#1c1917`, stone `#57534e`, deeper cyan `#006d75` for contrast.
-- Typography: Syne Bold, Outfit Regular, JetBrains Mono Regular, available from [Google Fonts](https://fonts.google.com/).
+- Light: paper `#eef0df`, sheet `#e5e9d3`, ink `#15201b`, red pen `#d93c16`.
+- Dark: paper `#0d1310`, sheet `#131b17`, ink `#dee5d5`, amber `#ffb224`.
+- Typography: system sans and monospace stacks. GitHub serves README images without web fonts, so the drawings name no font that has to be installed.
 
-The README uses a `picture` element with desktop and mobile artwork, each in light and dark variants. The displayed SVGs contain outlined lettering: no remote fonts, scripts, animation, or image services. Identity and headline also appear in the image's alternative text.
+All six SVGs are generated. To change a label, a colour or the pin list, edit `build.py` and run:
 
-Editable text versions live in [source](./source/). Open these with the three fonts installed, edit, then export with text converted to paths. The dark desktop output is `../header.svg`; the other outputs live here. Keep the SVG title and description when exporting.
+```bash
+python3 assets/build.py
+```
 
-Concept method: Edward de Bono's Lateral Provocations, using the constraint “show the transformations the work makes possible.”
+The README picks desktop or mobile artwork, each in light and dark, with a `picture` element. There are no scripts, animations or remote image services. Identity and the pin list also appear in each image's alternative text.
